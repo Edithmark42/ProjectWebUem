@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UEM Kolkata</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biller.io</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="logo"><img src="img/logo.jfif" alt=""></div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="html/About.html">About</a></li>
-                <li><a href="html/Admission.html">Admission</a></li>
-                <li><a href="html/contacts.html">Contacts</a></li>
-                <li><a href="html/calender.html">Calendar</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="information.html">Information</a></li>
+        </ul>
+      </nav>
+      <div class="name">
+        <p><big>Biller.io</big></p>
+      </div>
+      <div class="tagline">
+        <p>Get your bills done like a pro</p>
+      </div>
     </header>
-    <main>
-        <div class="background">
-             <img src="img/background.jpg" alt="" width="800px" height="400px">
-        </div>
+    <body>
+      <div class="login">
+        <!-- Name of backend file is backend.php change it accordingly -->
+        <form class="container" action="backend.php" onsubmit="redirect(event)"> 
+          <div class="mb-4">
+            <label for="name" class="form-label">Name : </label>
+            <input
+              type="name"
+              class="form-control"
+              id="name"
+              placeholder="     Abc Biller"
+              style="position: relative; left: 33px"
+            />
+          </div>
 
-        <div class="apply">
-            <button class="btn">Apply For IEMJEE</button>
-            <button class="btn">Pay Your Fees</button>
-            <button class="btn">Current Placement Record</button>
-        </div>
+          <div class="mb-4">
+            <label
+              for="email"
+              class="form-label"
+              style="position: relative; right: 33px"
+              >Email address :</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="     Abc@biller.com"
+            />
+          </div>
 
-        <div class="feed">
-            <div class="background">
-                <img src="img/background2.jpg" alt="">
-            </div>
-            <div class="yt">
-                <iframe width="700" height="300" src="https://www.youtube.com/watch?v=gkLtoe6zCvs&t=9s" title="University of Engineering and Management, Kolkata" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-    </main>
+          <input type="submit" class="btn" value="Sign in" id="mybtn"></input>
+        </form>
+      </div>
+      <!-- short bit of js to redirect the user to the home page -->
+      <script>
+        function redirect(e){
+          e.preventDefault();
+          location.href = "home.html";
+        }
+      
+      </script>
+    </body>
     <footer>
-        <p>Copyrights Claimed by University of Engineering and Management,Kolkata &copy;</p>
+      <p>Copyrights claimed by &copy; Biller.io team</p>
     </footer>
-</body>
+  </body>
 </html>
