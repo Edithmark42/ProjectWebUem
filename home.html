@@ -12,6 +12,29 @@
         #del{
             margin: 10px;
         }
+        #finalbtn{
+            height: 8vh;
+            width: 15vw;
+            background-color: rgb(21, 22, 24);
+            color: rgb(241, 241, 232);
+            border-radius: 15px;
+            position: relative;
+            left: 43vw;
+          }
+
+        #finalbtn:hover{
+            background-color:gold;
+            color: blue;
+          }
+
+        #total{
+          font-size: 30px;
+          font-weight: bold;
+          font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          position: relative;
+          left: 454px;
+          
+        }
     </style>
 </head>
 <body>
@@ -37,7 +60,7 @@
 
   <div id="items" class="my-4">
       <h2>Invoice #56 - to Mr xyz</h2>
-      <table class="table">
+      <table class="table" id="table">
           <thead>
             <tr>
               <th scope="col">Sl No.</th>
@@ -48,17 +71,15 @@
             </tr>
           </thead>
           <tbody id="tablebody">
-            <tr>
-              <th scope="row">1</th>
-              <td>pastries</td>
-              <td>10</td>
-              <td>200</td>
-              <td><button class="btn btn-primary" id="del">Delete</button>
-                <button class="btn btn-primary">Done</button></td>
-            </tr>
+            
             </tr>
           </tbody>
         </table>
+        <p id="total"></p>
+        <div id="divfinalbtn">
+        <button id="finalbtn" onclick="add()">Make my bill</button>
+      </div>
   </div>
 </body>
+<script src="script.js"></script>
 </html>
